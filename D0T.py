@@ -17,6 +17,15 @@ def main():
     text = font.render("Hello There", 1, (10, 10, 10))
     textpos = text.get_rect()
     textpos.centerx = background.get_rect().centerx
+    textpos.centery = background.get_rect().centery
+    background.blit(text, textpos)
+
+    # Display some more text
+    font = pygame.font.Font(None, 36)
+    text = font.render("Ankit", 1, (10, 10, 10))
+    textpos = text.get_rect()
+    textpos.centerx = background.get_rect().centerx/2
+    textpos.centery = background.get_rect().centery/2
     background.blit(text, textpos)
 
     # Blit everything to the screen
